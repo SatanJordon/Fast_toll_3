@@ -1,0 +1,25 @@
+{% extends 'users/base.html' %}
+
+{% block title %}
+Profile
+{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Profile Page</h1>
+
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card p-4">
+
+        <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button> <span class="name mt-3">{{ name }}</span> <span class="idd">{{ email }}</span>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">Rs. {{amount}} <span class="follow">To be paid</span></span> </div>
+            <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
+            <p>{{ car_number }}</p>
+
+        </div>
+    </div>
+</div>
+
+<p>Logout <a href="/accounts/logout">Here</a></p>
+
+{% endblock %}
